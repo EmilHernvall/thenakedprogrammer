@@ -1,0 +1,33 @@
+<h2>Ingredients</h2>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Quantity Type</th>
+  </tr>
+  <tr *ngFor="let ingredient of ingredients">
+    <td>{{ ingredient.id }}</td>
+    <td>{{ ingredient.name }}</td>
+    <td>{{ ingredient.quantityType.name }}</td>
+  </tr>
+</table>
+
+<h3>Add ingredient</h3>
+
+<form class="example-form">
+  <mat-form-field>
+    <input matInput placeholder="Name" name="name" value="" [(ngModel)]="ingredientName">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Quantity Type" name="qt" [(ngModel)]="ingredientQuantity">
+      <mat-option *ngFor="let qt of quantityTypes" [value]="qt.unit">
+        {{qt.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-button color="primary" type="button" (click)="onCreateIngredient()">Create</button>
+  
+</form>

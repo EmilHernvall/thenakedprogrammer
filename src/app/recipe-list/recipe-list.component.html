@@ -1,0 +1,16 @@
+<h2>Recipes</h2>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+  </tr>
+  <tr *ngFor="let recipe of recipes">
+    <td>{{ recipe.id }}</td>
+    <td><a routerLink="/recipe/{{ recipe.id }}">{{ recipe.name }}</a></td>
+  </tr>
+</table>
+
+<p>
+  <a routerLink="/recipe/create">New recipe</a>
+</p>

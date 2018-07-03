@@ -1,0 +1,37 @@
+:host {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    background-color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    padding: 10px 0;
+}
+header h1 {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: end;
+}
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+}

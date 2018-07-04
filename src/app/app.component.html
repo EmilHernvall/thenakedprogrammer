@@ -4,8 +4,9 @@
     <nav>
         <ul>
             <li><a routerLink="">Start</a></li>
-            <li><a routerLink="/recipe">Recipes</a></li>
-            <li><a routerLink="/ingredient">Ingredients</a></li>
+            <li *ngIf="currentUser"><a routerLink="/recipe">Recipes</a></li>
+            <li *ngIf="currentUser"><a routerLink="/ingredient">Ingredients</a></li>
+            <li *ngIf="currentUser"><a href="#" (click)="doLogout()">Logout</a></li>
         </ul>
     </nav>
 </header>

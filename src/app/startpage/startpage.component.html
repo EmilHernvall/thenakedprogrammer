@@ -1,3 +1,5 @@
-<p>
-  startpage works!
+<tnc-login *ngIf="!currentUser" [currentUser]="currentUser"></tnc-login>
+
+<p *ngIf="currentUser">
+  Welcome to the recipe database! You are signed in as {{ currentUser.name }}.
 </p>

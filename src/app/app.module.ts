@@ -15,6 +15,7 @@ import { IngredientListComponent } from './ingredient-list/ingredient-list.compo
 import { AppRoutingModule } from './/app-routing.module';
 import { StartpageComponent } from './startpage/startpage.component';
 import { RecipeEditorComponent } from './recipe-editor/recipe-editor.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RecipeEditorComponent } from './recipe-editor/recipe-editor.component';
     RecipeViewComponent,
     IngredientListComponent,
     StartpageComponent,
-    RecipeEditorComponent
+    RecipeEditorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+<form (submit)="doLogin()">
+  <p>
+    Welcome to the recipe database! Please sign in.
+  </p>
+
+  <p *ngIf="error" class="error">
+    {{ error }}
+  </p>
+
+  <mat-form-field>
+    <input matInput placeholder="E-mail" name="email" type="email" value="" [(ngModel)]="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Password" name="password" type="password" value="" [(ngModel)]="password">
+  </mat-form-field>
+
+  <button mat-button color="primary">Login</button>
+</form>

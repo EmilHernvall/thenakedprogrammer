@@ -1,0 +1,11 @@
+mat-form-field {
+    display: block;
+}
+
+.error {
+    color: red;
+    text-style: italic;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 25px;
+}

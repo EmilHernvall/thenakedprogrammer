@@ -131,7 +131,7 @@ app.post('/recipe', (req, res) => {
     // TODO: validate structure of submitted object
 
     let recipe = req.body;
-    recipe.id = recipeSequence++;
+    recipe.id = ++recipeSequence;
     recipes.push(recipe);
 
     fs.writeFile("recipes.json", JSON.stringify(recipes), function() {
@@ -159,7 +159,7 @@ app.post('/ingredient', (req, res) => {
     // TODO: validate request object structure
 
     let ingredient = req.body;
-    ingredient.id = ingredientSequence++;
+    ingredient.id = ++ingredientSequence;
     ingredients.push(ingredient);
 
     fs.writeFile("ingredients.json", JSON.stringify(ingredients), function() {

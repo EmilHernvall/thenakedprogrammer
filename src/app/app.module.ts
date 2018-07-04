@@ -16,6 +16,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { StartpageComponent } from './startpage/startpage.component';
 import { RecipeEditorComponent } from './recipe-editor/recipe-editor.component';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { FormValidationModule } from './form-validation/form-validation.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { LoginComponent } from './login/login.component';
     IngredientListComponent,
     StartpageComponent,
     RecipeEditorComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     MatInputModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    FormValidationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

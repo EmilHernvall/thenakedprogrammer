@@ -6,11 +6,13 @@ import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeViewComponent } from './recipe-view/recipe-view.component';
 import { RecipeEditorComponent } from './recipe-editor/recipe-editor.component';
 import { AuthService } from './auth.service';
+import { SignupComponent } from './signup/signup.component';
 
 // AuthService implements an interface called "CanActivate" which is used by the Router to
 // check whether or not the path is navigable.
 const routes: Routes = [
   { path: '', component: StartpageComponent },
+  { path: 'signup', component: SignupComponent },
   { path: 'ingredient', component: IngredientListComponent, canActivate: [ AuthService ] },
   { path: 'recipe', component: RecipeListComponent, canActivate: [ AuthService ] },
   { path: 'recipe/create', component: RecipeEditorComponent, canActivate: [ AuthService ] },

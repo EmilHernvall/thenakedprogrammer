@@ -1,0 +1,31 @@
+<form tncValidatedForm (formValid)="doSignup()" (formInvalid)="showErrors($event)">
+  <p>
+    100% GDPR incompatibility guaranteed!
+  </p>
+
+  <ul>
+    <li *ngFor="let validationError of validationErrors">{{ validationError }}</li>
+  </ul>
+
+  <mat-form-field>
+    <input matInput placeholder="Name" name="name" type="text" value="" [(ngModel)]="name" tncValidatedInput minLength="3">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="E-mail" name="email" type="email" value="" [(ngModel)]="email" tncValidatedInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Zip code" name="zipcode" type="zipcode" value="" [(ngModel)]="zipcode" tncValidatedInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Password" name="password" type="password" value="" [(ngModel)]="password" tncValidatedInput minLength="3">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Password" name="password_repeat" type="password" value="" [(ngModel)]="passwordRepeat" tncValidatedInput tncPasswordField="password">
+  </mat-form-field>
+
+  <button mat-button color="primary">Register</button>
+</form>
